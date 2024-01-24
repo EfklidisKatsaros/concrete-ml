@@ -7,20 +7,20 @@ import numpy
 import onnx
 from onnx import numpy_helper
 
-from ..common.debugging.custom_assert import assert_true
-from ..common.utils import (
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.utils import (
     MAX_BITWIDTH_BACKWARD_COMPATIBLE,
     get_onnx_opset_version,
     is_regressor_or_partial_regressor,
 )
-from ..onnx.convert import (
+from concrete.ml.onnx.convert import (
     OPSET_VERSION_FOR_ONNX_EXPORT,
     get_equivalent_numpy_forward_from_onnx_tree,
 )
-from ..onnx.onnx_model_manipulations import clean_graph_at_node_op_type, remove_node_types
-from ..onnx.onnx_utils import get_op_type
-from ..quantization import QuantizedArray
-from ..quantization.quantizers import UniformQuantizer
+from concrete.ml.onnx.onnx_model_manipulations import clean_graph_at_node_op_type, remove_node_types
+from concrete.ml.onnx.onnx_utils import get_op_type
+from concrete.ml.quantization import QuantizedArray
+from concrete.ml.quantization.quantizers import UniformQuantizer
 
 # pylint: disable=wrong-import-position,wrong-import-order
 

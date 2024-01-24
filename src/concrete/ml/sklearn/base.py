@@ -33,32 +33,32 @@ from sklearn.utils.validation import check_is_fitted
 # pylint: disable-next=ungrouped-imports
 from concrete import fhe as cp
 
-from ..common.check_inputs import check_array_and_assert, check_X_y_and_assert_multi_output
-from ..common.debugging.custom_assert import assert_true
-from ..common.serialization.dumpers import dump, dumps
-from ..common.utils import (
+from concrete.ml.common.check_inputs import check_array_and_assert, check_X_y_and_assert_multi_output
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.serialization.dumpers import dump, dumps
+from concrete.ml.common.utils import (
     USE_OLD_VL,
     FheMode,
     check_there_is_no_p_error_options_in_configuration,
     generate_proxy_function,
     manage_parameters_for_pbs_errors,
 )
-from ..onnx.convert import OPSET_VERSION_FOR_ONNX_EXPORT
-from ..onnx.onnx_model_manipulations import clean_graph_after_node_op_type, remove_node_types
+from concrete.ml.onnx.convert import OPSET_VERSION_FOR_ONNX_EXPORT
+from concrete.ml.onnx.onnx_model_manipulations import clean_graph_after_node_op_type, remove_node_types
 
 # The sigmoid and softmax functions are already defined in the ONNX module and thus are imported
 # here in order to avoid duplicating them.
-from ..onnx.ops_impl import numpy_sigmoid, numpy_softmax
-from ..quantization import PostTrainingQATImporter, QuantizedArray, get_n_bits_dict
-from ..quantization.quantized_module import QuantizedModule, _get_inputset_generator
-from ..quantization.quantizers import (
+from concrete.ml.onnx.ops_impl import numpy_sigmoid, numpy_softmax
+from concrete.ml.quantization import PostTrainingQATImporter, QuantizedArray, get_n_bits_dict
+from concrete.ml.quantization.quantized_module import QuantizedModule, _get_inputset_generator
+from concrete.ml.quantization.quantizers import (
     QuantizationOptions,
     UniformQuantizationParameters,
     UniformQuantizer,
 )
-from ..torch import NumpyModule
-from .qnn_module import SparseQuantNeuralNetwork
-from .tree_to_numpy import tree_to_numpy
+from concrete.ml.torch import NumpyModule
+from concrete.ml.sklearn.qnn_module import SparseQuantNeuralNetwork
+from tree_to_numpy import tree_to_numpy
 
 # Disable pylint to import Hummingbird while ignoring the warnings
 # pylint: disable=wrong-import-position,wrong-import-order

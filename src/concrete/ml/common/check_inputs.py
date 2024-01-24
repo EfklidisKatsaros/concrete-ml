@@ -7,7 +7,7 @@ scikit-learn to numpy types.
 import numpy
 import sklearn
 
-from ..common.debugging.custom_assert import assert_true
+from concrete.ml.common.debugging.custom_assert import assert_true
 
 # Disable pylint invalid name since scikit learn uses "X" as variable name for data
 # pylint: disable=invalid-name

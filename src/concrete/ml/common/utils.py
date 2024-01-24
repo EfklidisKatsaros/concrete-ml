@@ -12,8 +12,8 @@ import torch
 from concrete.fhe.dtypes import Integer
 from sklearn.base import is_classifier, is_regressor
 
-from ..common.check_inputs import check_array_and_assert
-from ..common.debugging import assert_true
+from concrete.ml.common.check_inputs import check_array_and_assert
+from concrete.ml.common.debugging import assert_true
 
 _VALID_ARG_CHARS = set(string.ascii_letters).union(str(i) for i in range(10)).union(("_",))
 

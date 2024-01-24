@@ -8,8 +8,8 @@ import torch.nn.utils.prune as pruning
 from brevitas.quant.scaled_int import Int8ActPerTensorFloat, Int8WeightPerTensorFloat, IntBias
 from torch import nn
 
-from ..common.debugging import assert_true
-from ..quantization.qat_quantizers import Int8ActPerTensorPoT, Int8WeightPerTensorPoT
+from concrete.ml.common.debugging import assert_true
+from concrete.ml.quantization.qat_quantizers import Int8ActPerTensorPoT, Int8WeightPerTensorPoT
 
 
 class SparseQuantNeuralNetwork(nn.Module):

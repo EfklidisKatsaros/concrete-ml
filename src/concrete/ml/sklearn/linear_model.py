@@ -15,30 +15,8 @@ from concrete.ml.onnx.ops_impl import numpy_sigmoid
 from concrete.ml.quantization import QuantizedModule
 from concrete.ml.torch.compile import compile_torch_model
 from _fhe_training_utils import LogisticRegressionTraining, LinearRegressionTraining, binary_cross_entropy, mean_squared_error
-from base import (
-    Data,
-    SklearnLinearClassifierMixin,
-    SklearnLinearRegressorMixin,
-    SklearnSGDClassifierMixin,
-    SklearnSGDRegressorMixin,
-    Target,
-)
-
-# from ..common.check_inputs import check_array_and_assert
-# from ..common.utils import FheMode
-# from ..onnx.ops_impl import numpy_sigmoid
-# from ..quantization import QuantizedModule
-# from ..torch.compile import compile_torch_model
-# from ._fhe_training_utils import LogisticRegressionTraining, LinearRegressionTraining, binary_cross_entropy, mean_squared_error
-
-# from .base import (
-#     Data,
-#     SklearnLinearClassifierMixin,
-#     SklearnLinearRegressorMixin,
-#     SklearnSGDClassifierMixin,
-#     SklearnSGDRegressorMixin,
-#     Target,
-# )
+from base import Data
+from base import SklearnLinearClassifierMixin, SklearnLinearRegressorMixin, SklearnSGDClassifierMixin, SklearnSGDRegressorMixin, Target
 
 
 # pylint: disable=invalid-name,too-many-instance-attributes,too-many-lines

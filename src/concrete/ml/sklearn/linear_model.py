@@ -9,13 +9,13 @@ import sklearn.linear_model
 from sklearn.linear_model import SGDClassifier as SklearnSGDClassifier
 from sklearn.preprocessing import LabelEncoder
 
-from ..common.check_inputs import check_array_and_assert
-from ..common.utils import FheMode
-from ..onnx.ops_impl import numpy_sigmoid
-from ..quantization import QuantizedModule
-from ..torch.compile import compile_torch_model
-from ._fhe_training_utils import LogisticRegressionTraining, binary_cross_entropy
-from .base import (
+from concrete.ml.common.check_inputs import check_array_and_assert
+from concrete.ml.common.utils import FheMode
+from concrete.ml.onnx.ops_impl import numpy_sigmoid
+from concrete.ml.quantization import QuantizedModule
+from concrete.ml.torch.compile import compile_torch_model
+from _fhe_training_utils import LogisticRegressionTraining, LinearRegressionTraining, binary_cross_entropy, mean_squared_error
+from base import (
     Data,
     SklearnLinearClassifierMixin,
     SklearnLinearRegressorMixin,
@@ -23,6 +23,22 @@ from .base import (
     SklearnSGDRegressorMixin,
     Target,
 )
+
+# from ..common.check_inputs import check_array_and_assert
+# from ..common.utils import FheMode
+# from ..onnx.ops_impl import numpy_sigmoid
+# from ..quantization import QuantizedModule
+# from ..torch.compile import compile_torch_model
+# from ._fhe_training_utils import LogisticRegressionTraining, LinearRegressionTraining, binary_cross_entropy, mean_squared_error
+
+# from .base import (
+#     Data,
+#     SklearnLinearClassifierMixin,
+#     SklearnLinearRegressorMixin,
+#     SklearnSGDClassifierMixin,
+#     SklearnSGDRegressorMixin,
+#     Target,
+# )
 
 
 # pylint: disable=invalid-name,too-many-instance-attributes,too-many-lines
@@ -1701,3 +1717,6 @@ class LogisticRegression(SklearnLinearClassifierMixin):
 
 
 # pylint: enable=too-many-instance-attributes,invalid-name
+a = SGDClassifier()
+print(a)
+a._get_training_quantized_module()

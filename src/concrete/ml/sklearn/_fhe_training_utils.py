@@ -4,7 +4,7 @@ from typing import Tuple
 
 import numpy
 import torch
-from torch.nn.functional import binary_cross_entropy_with_logits, mean_squared_error
+from torch.nn.functional import binary_cross_entropy_with_logits, mse_loss
 
 def mean_squared_error(y_true: numpy.ndarray, y_pred: numpy.ndarray):
     """Binary cross-entropy with logits.
@@ -16,7 +16,7 @@ def mean_squared_error(y_true: numpy.ndarray, y_pred: numpy.ndarray):
     Returns:
         The mean squared error loss value.
     """
-    return mean_squared_error(torch.Tensor(y_pred), torch.Tensor(y_true)).item()
+    return mse_loss(torch.Tensor(y_pred), torch.Tensor(y_true)).item()
 
 def binary_cross_entropy(y_true: numpy.ndarray, logits: numpy.ndarray):
     """Binary cross-entropy with logits.
@@ -183,8 +183,3 @@ class LinearRegressionTraining(torch.nn.Module):
 
         # (1, n_features, n_targets), (1, n_targets, 1)
         return weights, bias
-
-
-
-a = mean_squared_error(np.random.normal(1, 3, (4, 4)), np.random.normal(1, 3, (4, 4)))
-print("5")

@@ -15,8 +15,8 @@ from concrete.fhe import ParameterSelectionStrategy
 from concrete.fhe.compilation.artifacts import DebugArtifacts
 from concrete.fhe.compilation.configuration import Configuration
 
-from ..common.debugging import assert_false, assert_true
-from ..common.utils import (
+from concrete.ml.common.debugging import assert_false, assert_true
+from concrete.ml.common.utils import (
     MAX_BITWIDTH_BACKWARD_COMPATIBLE,
     check_there_is_no_p_error_options_in_configuration,
     get_onnx_opset_version,

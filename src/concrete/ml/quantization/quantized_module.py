@@ -11,9 +11,9 @@ from concrete.fhe.compilation.circuit import Circuit
 from concrete.fhe.compilation.compiler import Compiler
 from concrete.fhe.compilation.configuration import Configuration
 
-from ..common.debugging import assert_true
-from ..common.serialization.dumpers import dump, dumps
-from ..common.utils import (
+from concrete.ml.common.debugging import assert_true
+from concrete.ml.common.serialization.dumpers import dump, dumps
+from concrete.ml.common.utils import (
     SUPPORTED_FLOAT_TYPES,
     SUPPORTED_INT_TYPES,
     USE_OLD_VL,

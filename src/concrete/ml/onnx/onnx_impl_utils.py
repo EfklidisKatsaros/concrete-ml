@@ -8,7 +8,7 @@ from concrete.fhe import ones as fhe_ones
 from concrete.fhe import round_bit_pattern
 from concrete.fhe.tracing import Tracer
 
-from ..common.debugging import assert_true
+from concrete.ml.common.debugging import assert_true
 
 ComparisonOperationType = Callable[[int], bool]
 

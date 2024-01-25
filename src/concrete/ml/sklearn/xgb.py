@@ -6,7 +6,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 import numpy
 import xgboost.sklearn
 
-from ..common.debugging.custom_assert import assert_true
+from concrete.ml.common.debugging.custom_assert import assert_true
 from ..sklearn.tree_to_numpy import tree_to_numpy
 from .base import BaseTreeClassifierMixin, BaseTreeRegressorMixin
 

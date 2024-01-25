@@ -4,8 +4,8 @@ from typing import Any, Dict, Union
 import numpy
 import sklearn.neighbors
 
-from ..common.debugging.custom_assert import assert_true
-from ..common.utils import FheMode
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.utils import FheMode
 from .base import Data, SklearnKNeighborsClassifierMixin
 
 

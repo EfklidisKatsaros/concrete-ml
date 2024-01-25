@@ -10,9 +10,9 @@ import numpy
 
 from concrete import fhe
 
-from ..common.debugging.custom_assert import assert_true
-from ..common.serialization.dumpers import dump
-from ..common.serialization.loaders import load
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.serialization.dumpers import dump
+from concrete.ml.common.serialization.loaders import load
 from ..version import __version__ as CML_VERSION
 
 try:

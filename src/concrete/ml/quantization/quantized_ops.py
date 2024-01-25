@@ -13,7 +13,7 @@ from concrete.fhe import maxpool as fhe_maxpool
 from concrete.fhe import tag, univariate, zeros
 from typing_extensions import SupportsIndex
 
-from ..common.debugging import assert_false, assert_true
+from concrete.ml.common.debugging import assert_false, assert_true
 from ..onnx.onnx_impl_utils import (
     compute_onnx_pool_padding,
     numpy_onnx_pad,

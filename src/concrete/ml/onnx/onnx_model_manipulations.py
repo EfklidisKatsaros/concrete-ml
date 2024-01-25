@@ -5,7 +5,7 @@ from typing import Iterable, List
 
 import onnx
 
-from ..common.debugging import assert_true
+from concrete.ml.common.debugging import assert_true
 
 
 def simplify_onnx_model(onnx_model: onnx.ModelProto):

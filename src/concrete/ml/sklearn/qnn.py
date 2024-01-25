@@ -13,8 +13,8 @@ import torch
 from skorch.dataset import Dataset, ValidSplit
 from torch.utils.data import DataLoader
 
-from ..common.debugging import assert_true
-from ..common.utils import FheMode, check_dtype_and_cast
+from concrete.ml.common.debugging import assert_true
+from concrete.ml.common.utils import FheMode, check_dtype_and_cast
 from .base import QNN_AUTO_KWARGS, BaseClassifier, Data, QuantizedTorchEstimatorMixin, Target
 
 # Define the QNN's support float and int dtypes

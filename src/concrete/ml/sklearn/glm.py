@@ -7,8 +7,8 @@ from typing import Any, Dict, Union
 import numpy
 import sklearn.linear_model
 
-from ..common.debugging.custom_assert import assert_true
-from ..common.utils import FheMode
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.utils import FheMode
 from ..onnx.onnx_model_manipulations import clean_graph_after_node_op_type
 from .base import Data, SklearnLinearRegressorMixin
 

@@ -8,9 +8,9 @@ from typing import Any, Dict, Optional, TextIO, Union, get_type_hints
 import numpy
 from concrete.fhe.tracing.tracer import Tracer
 
-from ..common.debugging import assert_true
-from ..common.serialization.dumpers import dump, dumps
-from ..common.utils import QUANT_ROUND_LIKE_ROUND_PBS, array_allclose_and_same_shape
+from concrete.ml.common.debugging import assert_true
+from concrete.ml.common.serialization.dumpers import dump, dumps
+from concrete.ml.common.utils import QUANT_ROUND_LIKE_ROUND_PBS, array_allclose_and_same_shape
 
 STABILITY_CONST = 10**-6
 

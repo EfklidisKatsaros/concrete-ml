@@ -7,7 +7,7 @@ import numpy
 import onnx
 from onnx import numpy_helper
 
-from ..common.debugging import assert_true
+from concrete.ml.common.debugging import assert_true
 from ..onnx.onnx_utils import ONNX_OPS_TO_NUMPY_IMPL, get_attribute, get_op_type
 from ..onnx.ops_impl import RawOpOutput
 from ..torch.numpy_module import NumpyModule

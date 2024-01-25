@@ -8,11 +8,11 @@ import numpy
 
 from concrete import fhe
 
-from ..common.debugging import assert_false, assert_true
-from ..common.serialization.dumpers import dump, dumps
-from ..common.utils import compute_bits_precision
-from ..onnx.onnx_utils import ONNX_OPS_TO_NUMPY_IMPL
-from ..onnx.ops_impl import ONNXMixedFunction, RawOpOutput
+from concrete.ml.common.debugging import assert_false, assert_true
+from concrete.ml.common.serialization.dumpers import dump, dumps
+from concrete.ml.common.utils import compute_bits_precision
+from concrete.ml.onnx.onnx_utils import ONNX_OPS_TO_NUMPY_IMPL
+from concrete.ml.onnx.ops_impl import ONNXMixedFunction, RawOpOutput
 from .quantizers import (
     MinMaxQuantizationStats,
     QuantizationOptions,

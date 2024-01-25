@@ -7,8 +7,8 @@ import onnx
 import torch
 from torch import nn
 
-from ..common.debugging import assert_true
-from ..common.utils import get_onnx_opset_version
+from concrete.ml.common.debugging import assert_true
+from concrete.ml.common.utils import get_onnx_opset_version
 from ..onnx.convert import (
     OPSET_VERSION_FOR_ONNX_EXPORT,
     get_equivalent_numpy_forward_from_onnx,

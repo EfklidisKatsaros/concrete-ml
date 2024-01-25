@@ -10,9 +10,9 @@ import torch
 from numpy.random import RandomState
 from torch import nn
 
-from ..common.serialization.dumpers import dump, dumps
-from ..common.serialization.loaders import load, loads
-from ..common.utils import (
+from concrete.ml.common.serialization.dumpers import dump, dumps
+from concrete.ml.common.serialization.loaders import load, loads
+from concrete.ml.common.utils import (
     get_model_class,
     get_model_name,
     is_classifier_or_partial_classifier,
@@ -20,7 +20,7 @@ from ..common.utils import (
     is_pandas_type,
     is_regressor_or_partial_regressor,
 )
-from ..sklearn import (
+from concrete.ml.sklearn import (
     KNeighborsClassifier,
     LinearRegression,
     NeuralNetClassifier,

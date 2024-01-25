@@ -1,8 +1,8 @@
 """Import sklearn models."""
 from typing import Dict, List, Optional, Union
 
-from ..common.debugging.custom_assert import assert_true
-from ..common.utils import (
+from concrete.ml.common.debugging.custom_assert import assert_true
+from concrete.ml.common.utils import (
     get_model_name,
     is_classifier_or_partial_classifier,
     is_regressor_or_partial_regressor,

@@ -4,7 +4,7 @@ from typing import DefaultDict, Dict, List, Optional, Tuple
 
 import numpy
 
-from ..common.debugging import assert_true
+from concrete.ml.common.debugging import assert_true
 from .base_quantized_op import QuantizedMixingOp, QuantizedOp
 from .quantized_module import QuantizedModule
 from .quantized_ops import (
